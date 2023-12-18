@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: ubi-image-builder
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: ubi-image-builder
+    app.kubernetes.io/part-of: ubi-image-builder
+  name: ubi-image-builder
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: ubi-image-builder
+status:
+  loadBalancer: {}
