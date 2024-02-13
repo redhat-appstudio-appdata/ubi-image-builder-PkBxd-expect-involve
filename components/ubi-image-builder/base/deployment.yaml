@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/part-of: ubi-image-builder
   name: ubi-image-builder
 spec:
-  replicas: 1
+  replicas: 0
   revisionHistoryLimit: 0
   selector:
     matchLabels:
